@@ -1,0 +1,4 @@
+//maintain product = maintain ingredients
+add new product = create reciepe
+//maintain purchase = maintain purchase
+add items to inventory = create purchase

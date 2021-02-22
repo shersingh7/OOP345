@@ -1,0 +1,32 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       5 
+// Date:           20/02/2021
+//==============================================
+
+I learnt about lambda function in this workshop and also about catching and handling errors.
+I also learnt about using the string function str.replace.
+The () operator overloading was interesting. For eg.
+		template<typename T>
+		void fixSpelling(T& spellChecker) 
+		{
+			spellChecker(mTitle);
+			spellChecker(mDesc);
+		}
+The () operator is called for spellChecker on mTitle.
+Its aggregration as the spellChecker class and Movies don't know each other.
+
+The error handling was a bit tough. It caused alot of hassel in the spellChecker constructor and checking errors.
+So, I read all the notes and rewatched the lectures. The spellChecker constructor will generate exceptions in many conditions.
+For changing the code and have the similar result, I will change the spellChecker constructor and remove the throw exception.
+It will not do anything if the file isn't reading. The client side, I use the exceptions& for the arguments. Then, Will output "** EXCEPTION: " << error.what() << endl;
+
+The Movie and Book classes has similar logic for reading from the file. For reading, I will make a new module
+which will have a function to read and store the input from the file. This module will be called in the Movie and Book modules.
+
+Custom constructor is used for instantiating the main() function from the Movie and Book classes. The default constructor is also there and cannot be removed.
+Its important to define the default constructor cause if we don't make it the compiler is too smart and it will make one for us without knowing our needs.
+And can mess up things. 

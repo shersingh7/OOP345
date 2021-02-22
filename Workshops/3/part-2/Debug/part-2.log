@@ -1,0 +1,18 @@
+﻿  w3_p2.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\3\part-2\w3_p2.cpp(95,64): error C2664: 'sdds::PairSummable<int,std::string>::PairSummable(const K &,const V &)': cannot convert argument 1 from 'int' to 'const K &'
+          with
+          [
+              K=std::string,
+              V=int
+          ]
+          and
+          [
+              K=std::string
+          ]
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\3\part-2\w3_p2.cpp(95,64): message : Reason: cannot convert from 'int' to 'const K'
+          with
+          [
+              K=std::string
+          ]
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\3\part-2\w3_p2.cpp(95,64): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\3\part-2\PairSummable.h(34,9): message : see declaration of 'sdds::PairSummable<int,std::string>::PairSummable'

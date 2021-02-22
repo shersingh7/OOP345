@@ -1,0 +1,59 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       3 
+// Date:           06/02/2021
+//==============================================
+
+I learnt alot about templates in this workshop. Mainly I was getting stuck cause of the syntax problems.
+I was too slow starting the workshop, so I just stopped and read the course notes
+thoroughly. Also watched the lecture and few videos on youtube so that I have strong o+hold
+in the basics. After all this I completed it without the syntax erros.
+I also had to understand the w3_p2.cpp file so that I can write the code according to 
+the logic. I made the copy assignment in the Pair module for using the operator += in the PairSummable module.
+So when the condition is met I will copy the parameter to the current object.
+The reason we had to create specialization for the operator+=() is that whenever the 
+K and V are string, we will set the initial value to an empty string and whenever 
+V is an integer, the initial value will be set to zero. If we dont use the specialization,
+the compiler will not know to set the initial value according to our need.
+Along with that whenever the K and V values are string, += should add the comma to our store value.
+As, by defualt the compiler will know that and will add the values without comma.
+
+template<>
+    PairSummable<std::string, std::string>&
+        PairSummable<std::string, std::string>::operator += (
+            const PairSummable<std::string, std::string>& src
+            )
+    {
+
+        if (this->isCompatibleWith(src.key()))
+        {
+            std::string temp;
+            if (this->value() == "") {
+                temp = src.value();
+            }
+            else {
+                temp = this->value() + ", " + src.value();
+            }
+            PairSummable<std::string, std::string> newPS(this->key(), temp);
+            *this = newPS;
+        }
+
+        return *this;
+    }
+	
+The reason for specializing the initial value for summation is that based on the data type, 
+we want it to initialize to different values. So, for a string, initialize to empty string.
+   
+	template<>
+    const std::string PairSummable <std::string, std::string> ::initial ="";
+
+And for the int, initialize it to zero.
+
+    template<>
+    const int PairSummable <int, std::string> ::initial = 0;
+
+So, at the end I adjusted the display function according to the sample output provided.
+ 

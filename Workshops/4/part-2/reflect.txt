@@ -1,0 +1,39 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       4 
+// Date:           12/02/2021
+//==============================================
+
+I learnt so many things in this workshop and improved my coding skills.
+I learnt about handling the array of pointers and to store addresses in that array.
+The handling of input strings were complicated.
+I used the some tools that I had never used such as substr, erase, stoi and find.
+I started with removeing all the leading space and trailing space at the starting
+and ending of the strings stored.
+After that I used substr for storing specific string in the data members.
+Then I used erase to delete those strings for next storage.
+I had to repeat the same steps again and again.
+Then I had to find the comma, for using them in substr method as second parameter.
+For converting from string to integer I used stoi. There was a problem with the
+field width because the email were not stored with the <> covers and setw only works
+with the next output field. So I added the <> in the string that they were stored.
+		email = "<" + tempEmail + ">";
+
+The second part was bit complicated as it had to handled by the array of pointers.
+I get lost in pointers very easily so this was a challenge for me.
+So, I prepared myself by first revising all the pointers section in the notes before starting that part.
+Cause, if I start that part and I dont get it then I lose motivation. So better start prepared.
+I also thoroghly looked at the w4_p2.cpp. There were many hints in that file which helped alot.
+The problem I faced was at the += operator. I created a temp array to resize the dynamic array
+everytime the address was added to it. 
+            const Reservation** temp = nullptr;  
+            temp = new  const Reservation * [confirmNum + 1]; 
+
+The -= operator was a piece of cake for me.
+I just had to find the address and set it to nullptr and resize the array. That's it.
+
+The difference between the composition is that the it needs to complete the ownership
+whereas the aggregation can be used no matter if the objects exits or not.

@@ -1,0 +1,21 @@
+This workshop was a tough one. It took a lot of hours to finish. The problem started with reading the .txt file provided. 
+I read alot of materials from all over the internet about reading the file correctly. 
+The main problem was that the compiler was not reading the whole word. It was just reading a single character.
+So, I used the getline function with the char delimiter ' '.
+Also, during the while loop for copying the string to your data member, for that you need to keep incrementing the index so that the data is stored in the correct way.
+For that i used  
+ while (!f.eof()) 
+        {
+            std::string string;
+            getline(f, string, ' ');
+
+            ++temp;
+        }
+The other problem I faced was with the move constructor. As soon as I added the move constructor to the project. It caused an error. It said that the copy constructor was
+deleted. So, I read the whole thing find the mistake then I saw that I used StringSet(const StringSet* value) instead of StringSet(const StringSet& value).
+Before the move constructor, the compiler provided the default copy constructor, which i swhy my program ran perfectly. As I addded the move constructor, the copy constructor
+was deleted. Then I researched about this in the google and came to know that if the user defines the move constructor, the c++ will delete the copy constructor.
+
+The move is much faster than copy as for the copy, we duplicate the whole object whereas in move, we just copy the address and move the object. For eg:
+ str = new string[source.noOfRec];
+ noOfRec = source.noOfRec;

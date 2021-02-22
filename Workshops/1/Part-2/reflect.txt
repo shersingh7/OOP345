@@ -1,0 +1,15 @@
+This workshop was the first one after the 1 month winter break so I was very lazy doing it.
+I learnt many things in this workshop. I learnt teh use of linkage. 
+I also got a deep dive in the copy constructor concepts. The main issue I came across was with
+the event time. I didn't know how to make it start work. So I read the readme file carefully and
+used searched in the course notes for help. After reading the course notes I came to know that
+I have to used the g_sysClock global variable as it stored the start time. As I said,
+I used the course notes website for the revision of the linkage topics. I also used the extern keyword
+before the g_sysclock so that i can used the variable in multiple files such as Event.cpp and Event.cpp in my case.
+I was confused about the output as in line 19 of my output had a word sudoku but the sample output file
+had S capital in Sudoko. The tuesday file also had the small s sudoko. Rest, the output was perfect.
+Before coding for the copy constructor, I had to revise the concepts as they were some what blurry in
+my mind. The difference between the internal and external linkage as the name suggest is that internal
+is only for the current module whereas external is used so that the variables can be used globally and
+in different modules. But afterall, the project was complete and learnt that not to leave any project even if you think is easy
+for the last day.

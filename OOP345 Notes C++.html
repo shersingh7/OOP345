@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0061)https://ict.senecacollege.ca/~oop345/pages/content/index.html -->
+<html lang="en-us" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+
+ <title>OO Software Development
+ Using C++17 | ICT - Seneca</title>
+ 
+ <meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;https://www.icra.org/ratingsv02.html&quot; l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) &quot;https://www.rsac.org/ratingsv01.html&quot; l gen true r (n 0 s 0 v 0 l 0) &quot;https://www.classify.org/safesurf/&quot; l gen true r (SS~~000 1))">
+ <meta name="Copyright" content="(c) Copyright Seneca College, Chris Szalwinski 2017">
+ <meta name="Description" content="Welcome to the OOP345 Web Site.  On this site you can find a course on object-oriented programming using C++17.  Designed by Chris Szalwinski.">
+ <meta name="Abstract" content="This course continues the study of object-oriented programming introduced in OOP244.">
+ <meta name="Author" content="chris.szalwinski@senecacollege.ca">
+ <meta name="Keywords" content="software development, object-oriented programming, lecture notes">
+ <link rel="stylesheet" type="text/css" href="./OOP345 Notes_files/style.043.css">
+ <link rel="stylesheet" type="text/css" href="./OOP345 Notes_files/styleScreen.043.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="./OOP345 Notes_files/styleSPrint.043.css" media="print">
+ <link rel="stylesheet" type="text/css" href="./OOP345 Notes_files/styleNav.043.css">
+ <style type="text/css">
+/*<![CDATA[*/
+ div.c1 {text-align: center}
+ /*]]>*/
+ </style>
+</head>
+
+<body>
+ <table id="top" width="850" cellspacing="0" cellpadding="0" summary="body">
+  <!-- Banner -->
+
+  <tbody><tr class="banner">
+   <td colspan="2" class="banner">
+    <table cellspacing="0" cellpadding="0" summary="banner">
+     <tbody><tr>
+      <td class="w250 banner">
+       <div class="center">
+        <span class="text0">&nbsp;&nbsp;Software&nbsp;&nbsp;
+        <br>
+        &nbsp;&nbsp;Development&nbsp;&nbsp;</span>
+       </div>
+      </td>
+
+      <td class="tbanner"><img src="./OOP345 Notes_files/Banner4.gif" height="120" width="500" alt="Software Development"></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Navigation Bar -->
+
+  <tr class="navigate">
+   <td class="panel1" align="left" valign="bottom">
+    <ul id="tabnav">
+     <li><script type="text/javascript" src="./OOP345 Notes_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/outline.js.download"></script><a href="https://www.senecacollege.ca/ssos/printOutline.do?subjectCode=OOP345&amp;schoolCode=SICT&amp;termCode=20203&amp;state=both&amp;submit=Print+preview">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/timeline.html">Timeline</a></li>
+
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop345/pages/content/index.html">Notes</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/classroom_a.js.download"></script><a href="https://scs.senecac.on.ca/~ipc144/index.html">IPC144</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/classroom_b.js.download"></script><a href="https://scs.senecac.on.ca/~oop244/index.html">OOP244</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/instructors/index.html">Instructor</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/index_p.html"><img src="./OOP345 Notes_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page"></a></li>
+    </ul>
+   </td><!-- Web Site Title -->
+
+   <td class="panel2 w150 center"><span class="text1"><script type="text/javascript" src="./OOP345 Notes_files/subject.js.download">
+</script>OOP345</span></td>
+  </tr><!-- Body Cells -->
+
+  <tr class="content">
+   <!-- Content Area -->
+
+   <td class="tbody" valign="top">
+    <table cellpadding="10" width="100%" summary="content">
+     <tbody><tr>
+      <td class="content" valign="top">
+       <br>
+
+       <div class="center">
+        <span class="texthead">Object-Oriented Software Development Using C++</span>
+
+
+
+        <br>
+        <br>
+       </div>
+
+       <table class="center">
+       <tbody><tr>
+       <td class="half">
+       <ul style="list-style-type:none">
+       <li>Introduction</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/scope.html">Overview</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/start.html">C++ Building Blocks</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/stage.html">Compilation and Execution</a></li>
+       <br>
+       <li>Types</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/funda.html">Fundamental Types</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/compt.html">Pointers, References and Arrays</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/class.html">Classes and Scoped Enumerations</a></li>
+       <br>
+       <li>Class Relationships</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/inher.html">Inheritance and Inclusion Polymorphism</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/templ.html">Class Templates</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/compo.html">Compositions, Aggregations and Associations</a></li>
+       <br>
+       <li>Processing</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/expre.html">Expressions</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/funct.html">Functions</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/error.html">Error&nbsp;Handling</a></li>
+       <br>
+       </ul>
+       </td>
+       <td class="half">
+       <ul style="list-style-type:none">
+       <li>Standard Template Library</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/stlco.html">Standard Library</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/seque.html">Containers and Iterators</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/algor.html">Algorithms</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/files.html">File Stream Objects</a></li>
+       <br>
+       <li>Memory Model</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/point.html">Raw Pointers</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/smart.html">Smart Pointers</a></li>
+       <br>
+       <li>Performance</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/multi.html">Multithreading</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/threa.html">Thread Classes</a></li>
+       <!--<li>&#160;&#160;&#160;<a href="../content/openm.html">OpenMP Library</a></li>-->
+       <br>
+       <li>Deeper Detail</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/prepr.html">Pre-processor Directives</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/array.html">Arrays and Pointers</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/mult_.html">Multiple Inheritance</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/bitws.html">Bit-Wise Expressions</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/linkl.html">Linked List Technology</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/other.html">Other Topics</a></li>
+       </ul>
+       <br>
+       <br>
+       </td>
+       </tr>
+       <tr>
+       <td colspan="2">
+       <ul style="list-style-type:none">
+       <li>Appendices</li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/string.html">String Class</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/dllist.html">Doubly Linked List</a></li>
+       <li>&nbsp;&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/platf.html">Platform I/O Dependencies</a></li>
+       <li>&nbsp;&nbsp;&nbsp;Sample Code from the Notes<br>&nbsp;&nbsp;&nbsp;
+       - <a href="https://ict.senecacollege.ca/~oop345/pages/content/index_files.html">Index of Sample Files</a><br>&nbsp;&nbsp;&nbsp;
+       - <a href="https://ict.senecacollege.ca/~oop345/pages/content/sample_files.zip">Code Repository</a></li>
+       </ul>
+       </td>
+       </tr>
+       </tbody></table>
+       <br>
+       <br>
+       <br>
+       <br>
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Detail Menu -->
+
+   <td class="panel1 w150" valign="top" rowspan="2">
+    <ul id="mennav">
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/welco.html">Welcome</a></li>
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop345/pages/content/index.html">Notes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/scope.html">&nbsp;Overview</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/start.html">&nbsp;Building&nbsp;Blocks</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/stage.html">&nbsp;Compilation</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/funda.html">&nbsp;Fundamental&nbsp;Types</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/compt.html">&nbsp;Built-In&nbsp;Types</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/class.html">&nbsp;Class&nbsp;Types</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/inher.html">&nbsp;Inheritance</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/templ.html">&nbsp;Templates</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/compo.html">&nbsp;Compositions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/expre.html">&nbsp;Expressions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/funct.html">&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/error.html">&nbsp;Error&nbsp;Handling</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/stlco.html">&nbsp;Standard&nbsp;Library</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/seque.html">&nbsp;Containers,&nbsp;Iterators</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/algor.html">&nbsp;Algorithms</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/files.html">&nbsp;File&nbsp;Streams</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/point.html">&nbsp;Raw&nbsp;Pointers</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/smart.html">&nbsp;Smart&nbsp;Pointers</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/multi.html">&nbsp;Multithreading</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/threa.html">&nbsp;Thread&nbsp;Classes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/prepr.html">&nbsp;Pre-Processor</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/array.html">&nbsp;Arrays&nbsp;Pointers</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/mult_.html">&nbsp;Multiple&nbsp;Inheritance</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/bitws.html">&nbsp;Bit&nbsp;Wise&nbsp;Expressions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/linkl.html">&nbsp;Linked&nbsp;Lists</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/other.html">&nbsp;Other&nbsp;Topics</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/content/index.html">&nbsp;Appendices</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/workshops/index.html">Workshops</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/assignments/index.html">Assignments</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/handouts/index.html">Handouts</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/practice/index.html">Practice</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/resources/index.html">Resources</a></li>
+    </ul>
+   </td>
+  </tr><!-- Content Area Footer -->
+
+  <tr class="navigate">
+   <td class="panel3" align="center">
+    <table class="panel2" width="95%" summary="footer">
+     <tbody><tr>
+      <td align="left">&nbsp;&nbsp; <a href="https://ict.senecacollege.ca/~oop345/pages/content/index_p.html" class="text3"><img src="./OOP345 Notes_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page">&nbsp;print this
+      page</a>&nbsp;&nbsp;</td>
+
+      <td align="right">&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop345/pages/content/index.html#top" class="text3">Top&nbsp; <img src="./OOP345 Notes_files/ArrowToT.gif" height="15" width="15" alt="Go Back to the Top of this Page"></a></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Footer -->
+
+  <tr>
+   <!-- Left Panel -->
+
+   <td class="panel1 lateral center">
+    <!-- Lateral Motion Control -->
+
+    <table width="90%" class="center" summary="previous next">
+     <tbody><tr>
+      <td class="half" align="left"><a href="https://ict.senecacollege.ca/~oop345/pages/content/cpp11.html" class="text3"><img src="./OOP345 Notes_files/ArrowToL.gif" height="15" width="15" class="panel1" alt="Previous Reading">&nbsp;&nbsp;Previous:
+      Review</a></td>
+
+      <td class="half" align="right"><a href="https://ict.senecacollege.ca/~oop345/pages/content/scope.html" class="text3">Next: Overview&nbsp;&nbsp; <img src="./OOP345 Notes_files/ArrowToR.gif" height="15" width="15" class="panel1" alt="Next Reading"></a></td>
+     </tr>
+    </tbody></table>
+    <br>
+    <!-- Alternate Navigation Links -->
+
+    <ul id="altnav" class="center">
+     <li><script type="text/javascript" src="./OOP345 Notes_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/outline.js.download"></script><a href="https://www.senecacollege.ca/ssos/printOutline.do?subjectCode=OOP345&amp;schoolCode=SICT&amp;termCode=20203&amp;state=both&amp;submit=Print+preview">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/timeline.html">Timeline&nbsp;</a></li>
+    </ul>
+
+    <ul id="altnav2" class="center">
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop345/pages/content/index.html">Notes</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/classroom_a.js.download"></script><a href="https://scs.senecac.on.ca/~ipc144/index.html">IPC144</a></li>
+
+     <li><script type="text/javascript" src="./OOP345 Notes_files/classroom_b.js.download"></script><a href="https://scs.senecac.on.ca/~oop244/index.html">OOP244</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop345/pages/instructors/index.html">Instructor</a></li>
+    </ul>
+    <br>
+    <!-- Bottom Line -->
+
+    <table cellpadding="1" width="90%" summary="bottom line">
+     <tbody><tr>
+      <td class="w33 text3">&nbsp;&nbsp;Designed by Chris
+      Szalwinski&nbsp;&nbsp;</td>
+
+      <td class="w33 center"><a href="https://ict.senecacollege.ca/~oop345/pages/copyright.html" class="text3">Copying From This Site</a></td>
+
+      <td class="w33 text3" align="right">
+       <script type="text/javascript">
+//<![CDATA[
+                        var lm = document.lastModified.slice(0,-3);
+                        document.write("Last Modified: " +lm)
+       //]]>
+       </script>Last Modified: 11/15/2020 11:03&nbsp;&nbsp;
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Logo - Right Bottom Corner -->
+
+   <td class="panel2 w150" align="center"><img src="./OOP345 Notes_files/Logo.gif" alt="Logo" height="73" width="85"><br><a rel="license" href="https://creativecommons.org/licenses/by/2.5/ca/"><img alt="Creative Commons License" style="border-width:0" src="./OOP345 Notes_files/88x31.png"></a></td>
+  </tr>
+ </tbody></table>
+
+
+</body></html>

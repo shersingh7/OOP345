@@ -1,0 +1,2 @@
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\2\part-2\x64\Debug\part-2.exe
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\2\part-2\x64\Debug\part-2.pdb
