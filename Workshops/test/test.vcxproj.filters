@@ -15,34 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Book.cpp">
+    <ClCompile Include="controlPanel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Movie.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SpellChecker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="w5_p2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Book.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Collection.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Movie.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpellChecker.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

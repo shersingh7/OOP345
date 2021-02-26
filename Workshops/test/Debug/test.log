@@ -1,1 +1,6 @@
-﻿  test.vcxproj -> D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Debug\test.exe
+﻿  controlPanel.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(32,22): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(46,22): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(50,23): warning C4553: '==': result of expression not used; did you intend '='?
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Debug\test.exe : fatal error LNK1120: 1 unresolved externals

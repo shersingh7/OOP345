@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,17 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Book.cpp" />
-    <ClCompile Include="Movie.cpp" />
-    <ClCompile Include="SpellChecker.cpp" />
-    <ClCompile Include="w5_p2.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Book.h" />
-    <ClInclude Include="Collection.h" />
-    <ClInclude Include="Movie.h" />
-    <ClInclude Include="SpellChecker.h" />
-    <ClInclude Include="Util.h" />
+    <ClCompile Include="controlPanel.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
