@@ -1,6 +1,16 @@
-﻿  controlPanel.cpp
-D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(32,22): warning C4018: '<': signed/unsigned mismatch
-D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(46,22): warning C4018: '<': signed/unsigned mismatch
-D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\controlPanel.cpp(50,23): warning C4553: '==': result of expression not used; did you intend '='?
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Debug\test.exe : fatal error LNK1120: 1 unresolved externals
+﻿  w5_p2.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Collection.h(83,12): warning C4018: '>=': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Collection.h(82): message : while compiling class template member function 'T &sdds::Collection<T>::operator [](size_t) const'
+          with
+          [
+              T=sdds::Book
+          ]
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\w5_p2.cpp(139): message : see reference to function template instantiation 'T &sdds::Collection<T>::operator [](size_t) const' being compiled
+          with
+          [
+              T=sdds::Book
+          ]
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\w5_p2.cpp(54): message : see reference to class template instantiation 'sdds::Collection<sdds::Book>' being compiled
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Collection.h(126,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\w5_p2.cpp(132): message : see reference to function template instantiation 'std::ostream &sdds::operator <<<sdds::Book>(std::ostream &,const sdds::Collection<sdds::Book> &)' being compiled
+  test.vcxproj -> D:\College\Computer Programmer\SEM 3\OOP345\Workshops\test\Debug\test.exe

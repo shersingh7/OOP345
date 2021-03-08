@@ -136,4 +136,4 @@ namespace sdds
 		return os;
 	}
 }
-#endif // !_SDDS_COLLECTION_H
+#endif

@@ -1,0 +1,23 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       6 
+// Date:           07/03/2021
+//==============================================
+
+I learnt about vectors in this workshop. I also got to practice alot of lambda functions. I got good practice in 
+handling the string input from the <string> library. The biggest problem was also in the input handling of the strings
+I had to get the tag name and compare if it was for car or racecar. Then I had to remove the spaces from the string
+to get the correct input.
+
+Deallocation of dynamically allocated memory in vector is important beacause as we use the 
+push_back function of the vector, it will make a dynamic array and it doesnt not destroy it on its own.
+That is why we need to manually call the destructor for the vector.
+
+The loadData() uses the try and catch() method for detecting the unknown type of vehicle.
+The other way for doing the same thing is by using the if statement for filtering.
+
+We use sdds::Vehicle* instead of sdds::Vehicle is due to the fact that we add the address of the object to the dynamic
+array in the vector. As we iterate, we use *i for displaying the value.
