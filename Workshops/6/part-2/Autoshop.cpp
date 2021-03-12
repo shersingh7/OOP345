@@ -34,9 +34,14 @@ namespace sdds
 
 		out << "--------------------------------" << endl;
 	}
-	Autoshop::~Autoshop()
+
+	Autoshop::~Autoshop() 
 	{
-		for (int i = 0; i < m_vehicles.size(); i++) delete[] m_vehicles[i];
+		while (!m_vehicles.empty()) 
+		{
+			delete m_vehicles.back();
+			m_vehicles.pop_back();
+		}
 	}
 }
 

@@ -32,6 +32,7 @@ namespace sdds
 
 		a = temp.find(',');
 		cCondition = temp.substr(0, a);
+
 		if (cCondition.length() == 0 || cCondition == " ")
 		{
 			cCondition = "n";
@@ -40,33 +41,32 @@ namespace sdds
 		temp.erase(0, a + 1);
 
 		a = temp.find(',');
+
 		if (a > 0)
 		{
 			topSpeedStr = temp.substr(0, a);
 		}
 		temp.erase(0, a + 1);
 
-		//Remove spaces
-		auto a1 = cMaker.find_first_not_of(' '); // Find spaces before the string
-		auto a2 = cMaker.find_last_not_of(' '); //Find spaces after the string
+		auto a1 = cMaker.find_first_not_of(' '); 
+		auto a2 = cMaker.find_last_not_of(' ');
 
 		cMaker = cMaker.substr(a1, (a2 - a1) + 1);
 
-		a1 = cCondition.find_first_not_of(' '); // Find spaces before the string
-		a2 = cCondition.find_last_not_of(' '); //Find spaces after the string
+		a1 = cCondition.find_first_not_of(' '); 
+		a2 = cCondition.find_last_not_of(' '); 
 
 		cCondition = cCondition.substr(a1, (a2 - a1) + 1);
 
-		a1 = topSpeedStr.find_first_not_of(' '); // Find spaces before the string
-		a2 = topSpeedStr.find_last_not_of(' '); //Find spaces after the string
+		a1 = topSpeedStr.find_first_not_of(' '); 
+		a2 = topSpeedStr.find_last_not_of(' '); 
 
 		topSpeedStr = topSpeedStr.substr(a1, (a2 - a1) + 1);
 
-		a1 = temp.find_first_not_of(' '); // Find spaces before the string
-		a2 = temp.find_last_not_of(' '); //Find spaces after the string
+		a1 = temp.find_first_not_of(' '); 
+		a2 = temp.find_last_not_of(' '); 
 		temp = temp.substr(a1, (a2 - a1) + 1);
 
-		//if (cCondition == "n" && cCondition == "N" && cCondition == "u" && cCondition == "U" && cCondition == "b" && cCondition == "B")
 		if (cCondition != "n" && cCondition != "N" && cCondition != "u" && cCondition != "U" && cCondition != "b" && cCondition != "B")
 		{
 			throw "Invalid record!";
@@ -114,12 +114,14 @@ namespace sdds
 
 	void Car::display(ostream& out) const
 	{
-		out << "| " << right <<setw(10) << cMaker << " | " << left << setw(6) << condition() << " | " << setw(6) << fixed << setprecision(2) << topSpeed() << " |";
+		out << "| " << right << setw(10) << cMaker << " | " << left << setw(6) << condition() << " | " << setw(6) << fixed << setprecision(2) << topSpeed() << " |";
 	}
+
 	string Car::maker() const
 	{
 		return cMaker;
 	}
+
 	string& Car::topSpeedString()
 	{
 		return topSpeedStr;

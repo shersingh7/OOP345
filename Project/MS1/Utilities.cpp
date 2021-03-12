@@ -1,46 +1,60 @@
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "Utilities.h"
 
-using namespace sdds;
+namespace sdds
+{
+	char Utilities::m_delimiter;
 
-char Utilities::m_delimiter;
-
-	void Utilities::setFieldWidth(size_t newWidth) {
+	void Utilities::setFieldWidth(size_t newWidth)
+	{
 		m_widthField = newWidth;
 	}
 
-	size_t Utilities::getFieldWidth() const {
+	size_t Utilities::getFieldWidth() const
+	{
 		return this->m_widthField;
 	}
 
-	std::string Utilities::extractToken(const std::string& str, size_t& next_pos, bool& more) {
-		std::string token;
-		if (next_pos <= str.length()) {
-			size_t loc = str.find_first_of(m_delimiter, next_pos);
-			if (loc != std::string::npos) {
-				token = str.substr(next_pos, loc - next_pos);
-				next_pos = loc + 1;
+	std::string Utilities::extractToken(const std::string& str, size_t& next_pos, bool& more)
+	{
+		string temp;
+
+		if (next_pos <= str.length())
+		{
+			size_t a = str.find_first_of(m_delimiter, next_pos);
+			
+			if (a != std::string::npos)
+			{
+				temp = str.substr(next_pos, a - next_pos);
+				next_pos = a + 1;
 			}
-			else {
-				token = str.substr(next_pos);
+			else
+			{
+				temp = str.substr(next_pos);
 				next_pos = str.length() + 1;
 			}
-			if ((token.empty()) && (next_pos != str.length() + 1)) {
+
+			if (temp.empty() && (next_pos != str.length() + 1))
+			{
 				more = false;
-				throw str + "<-- ERROR:  Token Failure";
 			}
-			if (m_widthField < token.length()) {
-				m_widthField = token.length();
-			}
+
+			if (m_widthField < temp.length()) m_widthField = temp.length();
+
 			more = next_pos <= str.length();
 		}
-		return token;
-	}
 
-	 void Utilities::setDelimiter(char newDelimiter) {
-		 m_delimiter = newDelimiter;
+		return temp;
 	}
+	void Utilities::setDelimiter(char newDelimiter)
+	{
+		m_delimiter = newDelimiter;
+	}
+	char Utilities::getDelimiter()
+	{
+		return m_delimiter;
+	}
+}
 
-	 char Utilities::getDelimiter() {
-		 return m_delimiter;
-	}

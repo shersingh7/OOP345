@@ -22,7 +22,7 @@ namespace sdds
 
 	void Racecar::display(ostream& out) const
 	{
-		out << "| " << right << setw(10) << Car::maker() << " | " << setw(6) << Car::condition() << " | " << setprecision(2) << m_booster << " |*";
+		out << "| " << right << setw(10) << Car::maker() << " | " << setw(6) << left << Car::condition() << " | " << setprecision(2) << m_booster << " |*";
 	}
 
 	double Racecar::topSpeed() const
