@@ -1,0 +1,28 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       7 
+// Date:           18/03/2021
+//==============================================
+
+This is my favorite workshop so far. I enjoyed a lot doing this workshop. 
+I learnt alot about using the algorith library. I used vector for the better handling of arrays.
+
+The list of STL function that I used in this workshop are as follows:
+
+sort(): for sorting the collection by the title, length and the album;
+for_each(): for the display function used for showing the collection songs;
+any_of: in the inCollection function for searching for the artist name in the collection;
+accumulate: in the display function for calculating the total length of the song;
+copy_if(): in the getSongsForArtist function for checking if the artist exits in the list.
+
+Algorithms are much more efficient that doing the same thing the normal way. They are quick as the whole logic is already their in the library ready to use.
+As the logic is already there we just use it and will make our code much shorter and cleaner. 
+It will also reduce the errors as their will be much less code.
+
+Try and catch method can be used in the sort colection function.
+If the input is invalid, throw exception and catch it client side.
+
+I enjoyed alot doing this workshop. 
