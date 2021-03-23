@@ -37,7 +37,9 @@ namespace sdds
 		tempID = tempString.substr(0, tempString.find(':'));
 		tempID.erase(0, tempID.find_first_not_of(' '));
 		tempID.erase(tempID.find_last_not_of(' ') + 1);
+
 		tempString.erase(0, tempString.find(':')+1);
+
 		tempName=tempString.substr(0, tempString.find(','));
 		tempName.erase(0, tempName.find_first_not_of(' '));
 		tempName.erase(tempName.find_last_not_of(' ') + 1);

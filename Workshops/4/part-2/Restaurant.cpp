@@ -89,13 +89,14 @@ namespace sdds
 
 	Restaurant::Restaurant(Restaurant&& src) noexcept 
 	{
-		if (src.reservation != nullptr) 
+		/*if (src.reservation != nullptr) 
 		{ 
 			swap(reservation, src.reservation);
 			numOfRes = src.numOfRes;
 			src.numOfRes = 0;
 			src.reservation = nullptr;
-		}
+		}*/
+		*this = move(src);
 	}
 
 	Restaurant& Restaurant::operator=(const Restaurant& src) 

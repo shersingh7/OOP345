@@ -130,7 +130,7 @@ namespace sdds
 
 			out << "| " << left << setw(20) << theSong.title << " | " << setw(15) << theSong.artist << " | " << setw(20) << theSong.album;
 			if (theSong.year != 0) out << " | " << setw(6) << right << theSong.year << " | " << min << ":";
-			else out << setw(12) << " | " << min << ":";
+			else out << " | " << setw(6) << "" << " | " << right << min << ":";
 			if ((sec < 10)) out << "0" << sec;
 			else out << sec;
 			out << " | " << theSong.m_price << " |";

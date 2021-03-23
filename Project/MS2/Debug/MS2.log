@@ -1,0 +1,8 @@
+﻿  CustomerOrder.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(38,23): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(73,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(79,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(89,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\CustomerOrder.cpp(120,21): warning C4018: '<': signed/unsigned mismatch
+  MS2.vcxproj -> D:\College\Computer Programmer\SEM 3\OOP345\Project\MS2\Debug\MS2.exe

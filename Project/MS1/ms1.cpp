@@ -75,7 +75,7 @@ int main(int argc, char** argv)
 	cout << "=              Utilities               =" << endl;
 	cout << "========================================" << endl;
 	// create & initialize an array of input data
-	const struct { char delim; std::string data; } input[]
+	const struct { char delim; string data; } input[]
 	{
 		{ 'a', "a"},
 		{ 'b', "a" },
@@ -107,7 +107,7 @@ int main(int argc, char** argv)
 
 bool loadStations(const char* filenameSt, vector<Station>& theStations)
 {
-	std::ifstream file(filenameSt);
+	ifstream file(filenameSt);
 	if (!file)
 		throw string("Unable to open [") + filenameSt + "] file";
 
@@ -116,9 +116,9 @@ bool loadStations(const char* filenameSt, vector<Station>& theStations)
 	string theRecord;
 	while (!file.eof())
 	{
-		std::getline(file, theRecord);
+		getline(file, theRecord);
 		Station newItem(theRecord);
-		theStations.push_back(std::move(newItem));
+		theStations.push_back(move(newItem));
 	}
 	file.close();
 	return true;
