@@ -1,0 +1,8 @@
+﻿  Utilities.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\8\Utilities.cpp(26,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\8\Utilities.cpp(28,22): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\8\Utilities.cpp(49,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Workshops\8\Utilities.cpp(51,22): warning C4018: '<': signed/unsigned mismatch
+  w8_p2.cpp
+  Generating Code...
+  8.vcxproj -> D:\College\Computer Programmer\SEM 3\OOP345\Workshops\8\Debug\8.exe
