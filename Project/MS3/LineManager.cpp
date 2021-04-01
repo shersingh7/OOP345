@@ -45,7 +45,9 @@ namespace sdds
 	}
 	void LineManager::linkStations()
 	{
-		const Workstation* temp = activeLine;
+		if (m_orders.front().isItemFilled(this->getItemName()) && m_pNextStation) {
+			*m_pNextStation += std::move(m_orders.front());
+			m_orders.pop_front();
 	}
 	bool LineManager::run(std::ostream& os)
 	{

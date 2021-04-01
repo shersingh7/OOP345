@@ -1,0 +1,139 @@
+//Q1. How many numbers smaller than 20 and greater than 5 are in the vector??
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+int question1(std::vector<int>& vec)
+{
+    auto f = [](int i) { return ( (i < 20) && (i > 5) ); };
+    auto number = std::count_if(vec.begin(), vec.end(), f);
+    return number;
+}
+
+
+
+//Q2. How many numbers are smaller than 50 and are odd numbers in the vector?
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+int question2(std::vector<int>& vec)
+{
+    auto f = [](int i) { return ( (i < 50) && (i % 2) ); };
+    auto number = std::count_if(vec.begin(), vec.end(), f);
+    return number;
+}
+
+
+
+//Q3. What is the average of all odd numbers in the vector that are greater than 20?
+#include <vector>
+#include <numeric>
+#include <iostream>
+
+double question3(std::vector<int>& vec)
+{
+    int counter = 0;
+
+    auto f = [&](int x, int y)  {
+                                    int result = x;
+                                    if ( (y > 20) && (y % 2)) {
+                                        result = x + y;
+                                        counter++;
+                                    }
+                                    return result;
+                                };
+
+    double sum = std::accumulate(vec.begin(), vec.end(), 0, f);
+    return sum/counter;
+}
+
+
+
+//Q4. What is the average of the numbers that are greater or equal to 10 and even numbers?
+#include <vector>
+#include <numeric>
+#include <iostream>
+
+double question4(std::vector<int>& vec)
+{
+    int counter = 0;
+
+    auto f = [&](int x, int y)  {
+                                    int result = x;
+                                    if ( (y >= 10) && (!(y & 1))) {
+                                        result = x + y;
+                                        counter++;
+                                    }
+                                    return result;
+                                };
+
+    double sum = std::accumulate(vec.begin(), vec.end(), 0, f);
+    return sum/counter;
+}
+
+
+
+//Q5. Sort the numbers in the original vector in ascending order and print them
+#include <vector>
+#include <numeric>
+#include <iostream>
+
+void question5(std::vector<int>& vec)
+{
+    auto f = [&](int x, int y) { return x < y; };
+    std::sort(vec.begin(), vec.end(), f);
+}
+
+
+
+//Q15. Find the first odd value in the vector that is less than 20
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+int question15(std::vector<int>& vec)
+{
+    auto f = [](int i) { return ( (i < 20) && (i % 2)); };
+    std::vector<int>::iterator it = std::find_if(vec.begin(), vec.end(), f);
+    return *it;
+}
+
+
+
+//Q16. Copy all numbers in vec1 that are not divisible by 5 to vec2
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+int question15(std::vector<int>& vec1, std::vector<int>& vec2)
+{
+    auto f = [](int i) { return ((i%5)); };
+    vec2.erase(std::copy_if(vec1.begin(), vec1.end(), vec2.begin(), f), vec2.end());
+}
+
+
+
+//Q17. 
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+void question17(std::vector<int>& vec1, std::vector<int>& vec2, std::vector<int>& vec3)
+{
+    std::merge(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), vec3.begin());
+}
+
+
+
+
+//Q18. 
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+void question18(std::vector<int>& vec)
+{
+    std::sort(vec.begin(), vec.end());
+    vec.erase(unique(vec.begin(), vec.end()), vec.end());
+}
