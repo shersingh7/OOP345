@@ -65,9 +65,19 @@ namespace w9 {
 	{
 		// TODO (at-home): rewrite this function to use at least four threads
 		//         to encrypt/decrypt the text.
+
 		converter(text, key, nbytes, Cryptor());
+		//thread temp(bind(converter, text, key, nbytes/2, Cryptor()));
+		//thread temp2(bind(converter, text + nbytes / 2, key, nbytes - (nbytes / 2), Cryptor()));
+		thread temp(bind(converter, text, key, nbytes, Cryptor()));
+		thread temp2(bind(converter, text, key, nbytes, Cryptor()));
+		thread temp3(bind(converter, text, key, nbytes, Cryptor()));
+		thread temp4(bind(converter, text, key, nbytes, Cryptor()));
 
-
+		temp.join();
+		temp2.join();
+		temp3.join();
+		temp4.join();
 
 		encoded = !encoded;
 	}
@@ -80,22 +90,26 @@ namespace w9 {
 		else
 		{
 			// TODO: open a binary file for writing
-
+			ofstream tempFile;
+			tempFile.open(file, ios::out | ios::binary);
 
 			// TODO: write data into the binary file
 			//         and close the file
+			tempFile.write(text, nbytes);
+			tempFile.close();
 		}
 	}
 
 	void SecureData::restore(const char* file, char key) {
 		// TODO: open binary file for reading
-
+		ifstream tempFile;
+		tempFile.open(file, ios::in | ios::binary);
 
 		// TODO: - allocate memory here for the file content
-
+		text = new char[nbytes + 1];
 
 		// TODO: - read the content of the binary file
-
+		tempFile.read(text, nbytes);
 
 		*ofs << "\n" << nbytes << " bytes copied from binary file "
 			<< file << " into memory.\n";
@@ -107,6 +121,7 @@ namespace w9 {
 
 		*ofs << "Data decrypted in memory\n\n";
 	}
+
 
 	std::ostream& operator<<(std::ostream& os, const SecureData& sd) {
 		sd.display(os);

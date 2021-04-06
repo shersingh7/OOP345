@@ -43,7 +43,7 @@ namespace sdds
 
 			m_lstItem = new Item * [m_cntItem];
 
-			for (int i = 0; (i < m_cntItem) && ok; i++) m_lstItem[i] = new Item(temp.extractToken(str, a, ok));
+			for (size_t i = 0; (i < m_cntItem) && ok; i++) m_lstItem[i] = new Item(temp.extractToken(str, a, ok));
 
 			if (m_widthField < temp.getFieldWidth()) m_widthField = temp.getFieldWidth();
 		}
@@ -78,15 +78,16 @@ namespace sdds
 	}
 	CustomerOrder::~CustomerOrder()
 	{
-		for (int i = 0; i < m_cntItem; i++) delete m_lstItem[i];
+		for (size_t i = 0; i < m_cntItem; i++) delete m_lstItem[i];
 	}
 	bool CustomerOrder::isFilled() const
 	{
 		bool ok = false;
 
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			if (m_lstItem[i]->m_isFilled) ok = true;
+			else ok = false;
 		}
 		return ok;
 	}
@@ -94,7 +95,7 @@ namespace sdds
 	{
 		bool ok = false;
 
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			if (itemName.compare(m_lstItem[i]->m_itemName) == 0) ok = true;
 		}
@@ -102,7 +103,7 @@ namespace sdds
 	}
 	void CustomerOrder::fillItem(Station& station, std::ostream& os)
 	{
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			if (m_lstItem[i]->m_itemName == station.getItemName())
 			{
@@ -125,7 +126,7 @@ namespace sdds
 	{
 		os << m_name << " - " << m_product << endl;
 
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			os << "[" << right << setw(6) << setfill('0') << m_lstItem[i]->m_serialNumber << "] " << setfill(' ') << left << setw(m_widthField) << m_lstItem[i]->m_itemName;
 			if (m_lstItem[i]->m_isFilled) os << " - FILLED\n";

@@ -1,21 +1,23 @@
 #ifndef _SDDS_WORKSTATION_H
 #define _SDDS_WORKSTATION_H
 
+#include  <deque>
 #include"CustomerOrder.h"
 #include"Station.h"
+#include "Utilities.h"
 
-#include<deque>
 
 using namespace std;
 namespace sdds
 {
 
-	extern deque<CustomerOrder>pending;
-	extern deque<CustomerOrder>completed;
-	extern deque<CustomerOrder>incomplete;
-
 	class Workstation:public Station
 	{
+
+		deque<CustomerOrder>pending;
+		deque<CustomerOrder>completed;
+		deque<CustomerOrder>incomplete;
+
 		deque<CustomerOrder>m_orders;
 		Workstation* m_pNextStation;
 

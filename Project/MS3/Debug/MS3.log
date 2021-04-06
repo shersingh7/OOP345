@@ -1,0 +1,87 @@
+﻿  CustomerOrder.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(46,23): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(81,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(87,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(105,21): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\CustomerOrder.cpp(128,21): warning C4018: '<': signed/unsigned mismatch
+  LineManager.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(28,22): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(32,24): warning C4018: '<': signed/unsigned mismatch
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(34,94): error C2664: 'void sdds::Workstation::setNextStation(sdds::Workstation *)': cannot convert argument 1 from 'sdds::Workstation' to 'sdds::Workstation *'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(34,82): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\Workstation.h(25,8): message : see declaration of 'sdds::Workstation::setNextStation'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(48,7): error C2065: 'm_orders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(48,43): error C2039: 'getItemName': is not a member of 'sdds::LineManager'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.h(18): message : see declaration of 'sdds::LineManager'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(48,61): error C2065: 'm_pNextStation': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(49,5): error C2065: 'm_pNextStation': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(49,33): error C2065: 'm_orders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(49,28): error C2672: 'std::move': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(49,49): error C2780: '_OutIt std::move(_InIt,_InIt,_OutIt)': expects 3 arguments - 1 provided
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(4692): message : see declaration of 'std::move'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(50,4): error C2065: 'm_orders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(54,2): error C2601: 'sdds::LineManager::run': local function definitions are illegal
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(47): message : this line contains a '{' which has not yet been matched
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(109,2): error C2601: 'sdds::LineManager::display': local function definitions are illegal
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(47): message : this line contains a '{' which has not yet been matched
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(74,17): warning C4805: '!=': unsafe mix of type 'int' and type 'bool' in operation
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(79,65): error C2039: 'run': is not a member of 'sdds::Workstation'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\Workstation.h(14): message : see declaration of 'sdds::Workstation'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(88,9): error C2065: 'm_orders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(90,17): error C2065: 'm_orders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(90,12): error C2672: 'std::move': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(90,1): error C2780: '_OutIt std::move(_InIt,_InIt,_OutIt)': expects 3 arguments - 1 provided
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(4692): message : see declaration of 'std::move'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(91,6): error C2065: 'm_oroders': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(103,4): error C2143: syntax error: missing ';' before '}'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(102,17): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(112,14): error C3321: an initializer list is unexpected in this context
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(112,4): error C2064: term does not evaluate to a function taking 1 arguments
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.cpp(4): fatal error C1075: '{': no matching token found
+  ms3.cpp
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(85,4): error C2065: 'pending': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(93,18): error C2660: 'sdds::LineManager::display': function does not take 1 arguments
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.h(32,8): message : see declaration of 'sdds::LineManager::display'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(100,18): error C2660: 'sdds::LineManager::display': function does not take 1 arguments
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\LineManager.h(32,8): message : see declaration of 'sdds::LineManager::display'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(118,23): error C2065: 'completed': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(118,23): error C2672: 'begin': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(2170): message : see declaration of 'std::begin'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): message : With the following template arguments:
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): message : '_Container=unknown-type'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\initializer_list(57): message : see declaration of 'std::begin'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(118,23): error C2672: 'end': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(2180): message : see declaration of 'std::end'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): message : With the following template arguments:
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): message : '_Container=unknown-type'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\initializer_list(63): message : see declaration of 'std::end'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C3536: '<begin>$L3': cannot be used before it is initialized
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(119,3): error C3536: '<end>$L3': cannot be used before it is initialized
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(118,32): error C2100: illegal indirection
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(120,23): error C2065: 'incomplete': undeclared identifier
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(120,23): error C2672: 'begin': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(2170): message : see declaration of 'std::begin'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): message : With the following template arguments:
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): message : '_Container=unknown-type'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\initializer_list(57): message : see declaration of 'std::begin'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(120,23): error C2672: 'end': no matching overloaded function found
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(2180): message : see declaration of 'std::end'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): message : With the following template arguments:
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): message : '_Container=unknown-type'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\initializer_list(63): message : see declaration of 'std::end'
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C3536: '<begin>$L4': cannot be used before it is initialized
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(121,3): error C3536: '<end>$L4': cannot be used before it is initialized
+D:\College\Computer Programmer\SEM 3\OOP345\Project\MS3\ms3.cpp(120,33): error C2100: illegal indirection
+  Station.cpp
+  Utilities.cpp
+  Workstation.cpp
+  Generating Code...
