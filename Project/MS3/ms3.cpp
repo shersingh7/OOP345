@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 		cout << "========================================" << endl;
 		cout << "=           Filling Orders             =" << endl;
 		cout << "========================================" << endl;
-		//run the assembly line until all orders processed
+		//run the assembly str until all orders processed
 		while (!lm.run(cout));		
 		cout << endl << endl;
 	}

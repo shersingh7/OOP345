@@ -1,0 +1,16 @@
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       9 
+// Date:           07/04/2021
+//==============================================
+
+I learnt about threads and binding in this workshop. I used the fstream library. 
+ifstream for reading and ofstream for writing in file.
+We use binary file for efficency. Storing text uses much more amount of memory than binary.
+Its also much faster to read binary file. You can make different fuctors that can accept many types of arguments using the std::bind.
+As example for that the provided function converter() has different aruguments types (char*, char, int, Cryptors&).
+Mutithreading is very important because it enables cpu to do multiple things at a time which makes this faster.
+Its very efficent also because cpu is not getting stressed at one part. Its work is divided so as the stress.

@@ -19,50 +19,58 @@ namespace sdds
 		m_cntItem = 0;
 		m_lstItem = nullptr;
 	}
+
 	CustomerOrder::CustomerOrder(const string& str)
 	{
-		Utilities temp;
-		bool ok = false;
-		size_t a = 0;
-
-		if (str.empty())
+		if (str != "") 
 		{
-			m_name = "";
-			m_product = "";
 			m_cntItem = 0;
 			m_lstItem = nullptr;
-		}
-		else
-		{
+			Utilities temp;
+			size_t a = 0;
+			bool ok = true;
+			Item* tempItem[20] = {};
 			m_name = temp.extractToken(str, a, ok);
+			m_product = temp.extractToken(str, a, ok);
 
-			if (ok) m_product = temp.extractToken(str, a, ok);
-
-			string tempItems = str.substr(a, str.length() - a);
-			m_cntItem = count(tempItems.begin(), tempItems.end(), temp.getDelimiter()) + 1;
+			while (ok)
+			{
+				string tempStr = temp.extractToken(str, a, ok);
+				tempItem[m_cntItem] = new Item(tempStr);
+				m_cntItem++;
+			}
 
 			m_lstItem = new Item * [m_cntItem];
 
-			for (int i = 0; (i < m_cntItem) && ok; i++) m_lstItem[i] = new Item(temp.extractToken(str, a, ok));
+			for(size_t i = 0; i < m_cntItem; i++) 
+			{
+				m_lstItem[i] = tempItem[i];
+			}
 
-			if (m_widthField < temp.getFieldWidth()) m_widthField = temp.getFieldWidth();
+			if (m_widthField < temp.getFieldWidth()) 
+			{
+				m_widthField = temp.getFieldWidth();
+			}
 		}
 	}
+
 	CustomerOrder::CustomerOrder(const CustomerOrder&)
 	{
 		throw "Error";
 	}
+
 	CustomerOrder::CustomerOrder(CustomerOrder&& src) noexcept
 	{
 		m_lstItem = nullptr;
 		m_cntItem = 0;
 		*this = move(src);
 	}
+
 	CustomerOrder& CustomerOrder::operator=(CustomerOrder&& src) noexcept
 	{
 		if (this != &src)
 		{
-			for(unsigned int i=0;i<m_cntItem;i++) delete m_lstItem[i];
+			for(size_t i=0;i<m_cntItem;i++) delete m_lstItem[i];
 			m_name = src.m_name;
 			m_cntItem = src.m_cntItem;
 			m_lstItem = src.m_lstItem;
@@ -76,33 +84,36 @@ namespace sdds
 		}
 		return *this;
 	}
+
 	CustomerOrder::~CustomerOrder()
 	{
-		for (int i = 0; i < m_cntItem; i++) delete m_lstItem[i];
+		for (unsigned int i = 0; i < m_cntItem; i++) delete m_lstItem[i];
+
+		delete[] m_lstItem;
 	}
+
 	bool CustomerOrder::isFilled() const
 	{
-		bool ok = false;
-
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
-			if (m_lstItem[i]->m_isFilled) ok = true;
+			if ((m_lstItem[i]->m_isFilled) == false) return false;
 		}
-		return ok;
+		return true;
 	}
+
 	bool CustomerOrder::isItemFilled(const std::string& itemName) const
 	{
-		bool ok = false;
 
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
-			if (itemName.compare(m_lstItem[i]->m_itemName) == 0) ok = true;
+			if (itemName.compare(m_lstItem[i]->m_itemName) == 0) return m_lstItem[i]->m_isFilled;
 		}
-		return ok;
+		return true;
 	}
+
 	void CustomerOrder::fillItem(Station& station, std::ostream& os)
 	{
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			if (m_lstItem[i]->m_itemName == station.getItemName())
 			{
@@ -114,18 +125,19 @@ namespace sdds
 
 					os << setw(11) << right << "Filled " << m_name << ", " << m_product << " [" << m_lstItem[i]->m_itemName << "]\n";
 				}
-				else
+				else if(station.getQuantity() == 0)
 				{
 					os << setw(11) << right << "Unable to fill " << m_name << ", " << m_product << " [" << m_lstItem[i]->m_itemName << "]\n";
 				}
 			}
 		}
 	}
+
 	void CustomerOrder::display(std::ostream& os) const
 	{
 		os << m_name << " - " << m_product << endl;
 
-		for (int i = 0; i < m_cntItem; i++)
+		for (size_t i = 0; i < m_cntItem; i++)
 		{
 			os << "[" << right << setw(6) << setfill('0') << m_lstItem[i]->m_serialNumber << "] " << setfill(' ') << left << setw(m_widthField) << m_lstItem[i]->m_itemName;
 			if (m_lstItem[i]->m_isFilled) os << " - FILLED\n";
@@ -133,4 +145,5 @@ namespace sdds
 		}
 	}
 }
+
 

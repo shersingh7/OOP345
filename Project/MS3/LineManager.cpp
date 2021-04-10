@@ -1,116 +1,121 @@
+// Name: Davinder Verma
+// Seneca Student ID: 121802201
+// Seneca email: dverma22@myseneca.ca
+// Date of completion: 05/04/2021
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+
 #include "LineManager.h"
 
 namespace sdds
 {
 	LineManager::LineManager(const std::string& file, const std::vector<Workstation*>& stations)
 	{
-		Utilities util;
 		ifstream f(file);
 
 		if (!(f.is_open())) throw "Error";
-
-		string currentStation = "";
-		string nextStation = "";
-		string temp = "";
-
-		size_t a = 0;
-
-		bool ok = false;
-
-		while (!(f.eof()))
+		else
 		{
-			getline(f, temp);
 
-			currentStation = util.extractToken(temp, a, ok);
-
-			if (ok) nextStation = util.extractToken(temp, a, ok);
-			
-			for (int i = 0; i < stations.size(); i++)
+			while (!f.eof())
 			{
-				if (stations[i]->getItemName() == currentStation)
-				{
-					for (int a = 0; a < stations.size(); a++)
-					{
-						if (stations[a]->getItemName() == nextStation) stations[i]->setNextStation(*stations[a]);
-					}
+				Utilities temp;
+				size_t a = 0;
+				bool ok = false;
+				string str;
+				string stationStr;
+				string nextStationStr;
 
-					if (m_firstStation == nullptr) m_firstStation = stations[i];
+				temp.setDelimiter('|');
+
+				getline(f, str);
+
+				stationStr = temp.extractToken(str, a, ok);
+
+				if (ok) 
+				{
+					nextStationStr = temp.extractToken(str, a, ok);
+				}
+				else 
+				{
+					nextStationStr = "";
+				}
+
+				for (auto iterator : stations) 
+				{
+					if (stationStr == iterator->getItemName())
+					{
+						for (auto iterator2 : stations)
+						{
+							if (iterator2->getItemName() == nextStationStr)
+							{
+								iterator->setNextStation(iterator2);
+							}
+						}
+						activeLine.push_back(iterator);
+					}
 				}
 			}
+			f.close();
+			m_firstStation = activeLine.front();
+			m_cntCustomerOrder = pending.size();
+
 		}
 
-		f.close();
-
-		
 	}
 	void LineManager::linkStations()
 	{
-		if (m_orders.front().isItemFilled(this->getItemName()) && m_pNextStation) {
-			*m_pNextStation += std::move(m_orders.front());
-			m_orders.pop_front();
+		for (size_t i = 0; i < activeLine.size(); i++) 
+		{
+			if (!activeLine[i]->getNextStation()) 
+			{
+				swap(activeLine[activeLine.size() - 1], activeLine[i]);
+				break;
+			}
+		}
+
+		for (size_t i = activeLine.size() - 1; i > 0; i--) 
+		{
+			Workstation* temp = activeLine[i];
+			for (size_t x = 0; x < i; x++) 
+			{
+				if (temp == activeLine[x]->getNextStation()) 
+				{
+					swap(activeLine[i - 1], activeLine[x]);
+				}
+			}
+		}
 	}
 
 	bool LineManager::run(std::ostream& os)
 	{
-		static int counter = 1;
+		static size_t count = 1;
+		os << "Line Manager Iteration: " << count << endl;
 
-		os << "Line Manager Iteration: " << counter << endl;
-		counter++;
-		bool ok = false;
-
-		if (!pending.empty())
+		if (!pending.empty()) 
 		{
-			int temp = 0;
-			for (size_t i=0;i< activeLine.size();i++)
-			{
-				temp = i;
-				for (size_t j = 0; j < activeLine.size(); j++)
-				{
-					if (activeLine[j]->getNextStation() != nullptr && activeLine[i]->getItemName().compare(activeLine[j]->getNextStation()->getItemName()) == 0)
-					{
-						temp = ok;
-					}
-				}
-				if (temp != ok) break;
-			}
-			*activeLine[temp] += move(pending.front());
+			*activeLine.front() += move(pending.front());
 			pending.pop_front();
 		}
-		for(size_t i = 0; i < activeLine.size(); i++) activeLine[i]->run(os);
 
-		for(size_t i = 0; i < activeLine.size(); i++)
+		for (size_t i = 0; i < activeLine.size(); i++) 
 		{
-			if (activeLine[i]->getNextStation() == nullptr)
-			{
-				CustomerOrder obj;
-				bool check = false;
-				
-				if (m_orders.front().isOrderFilled())
-				{
-					obj = move(m_orders.front());
-					m_oroders.pop_front();
-					check = true;
-				}
-
-				if (check)
-				{
-					completed.push_back(move(obj));
-				}
-			}
-			else
-			{
-				activeLine[i]
-			}
-
+			activeLine[i]->fill(os);
 		}
 
+		for (size_t i = 0; i < activeLine.size(); i++)
+		{
+			activeLine[i]->attemptToMoveOrder();
+		}
+		count++;
+		return completed.size() == m_cntCustomerOrder;
 	}
-	void LineManager::display() const
+	void LineManager::display(ostream& os) const
 	{
 		for (size_t i=0;i<activeLine.size();i++)
 		{
-			activeLine{ i }->display(cout);
+			activeLine[i]->display(os);
 		}
 	}
 }
-

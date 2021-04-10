@@ -1,6 +1,15 @@
 // Workshop 9 - Multi-Threading
 // SecureData.cpp
 
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       9 
+// Date:           07/04/2021
+//==============================================
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -67,8 +76,6 @@ namespace w9 {
 		//         to encrypt/decrypt the text.
 
 		converter(text, key, nbytes, Cryptor());
-		//thread temp(bind(converter, text, key, nbytes/2, Cryptor()));
-		//thread temp2(bind(converter, text + nbytes / 2, key, nbytes - (nbytes / 2), Cryptor()));
 		thread temp(bind(converter, text, key, nbytes, Cryptor()));
 		thread temp2(bind(converter, text, key, nbytes, Cryptor()));
 		thread temp3(bind(converter, text, key, nbytes, Cryptor()));
@@ -103,10 +110,10 @@ namespace w9 {
 	void SecureData::restore(const char* file, char key) {
 		// TODO: open binary file for reading
 		ifstream tempFile;
-		tempFile.open(file, ios::in | ios::binary);
+		tempFile.open(file, ifstream::binary);
 
 		// TODO: - allocate memory here for the file content
-		text = new char[nbytes + 1];
+		text = new char[nbytes];
 
 		// TODO: - read the content of the binary file
 		tempFile.read(text, nbytes);
@@ -120,6 +127,7 @@ namespace w9 {
 		code(key);
 
 		*ofs << "Data decrypted in memory\n\n";
+		tempFile.close();
 	}
 
 
@@ -128,3 +136,4 @@ namespace w9 {
 		return os;
 	}
 }
+

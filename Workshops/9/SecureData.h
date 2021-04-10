@@ -1,5 +1,15 @@
 // Workshop 9 - Multi-Threading
 // SecureData.h
+
+//==============================================
+// Name:           Davinder Verma
+// Student Number: 121802201
+// Email:          dverma22@myseneca.ca
+// Section:        NAA
+// Workshop:       9 
+// Date:           07/04/2021
+//==============================================
+
 #ifndef W9_SECUREDATA_H
 #define W9_SECUREDATA_H
 
