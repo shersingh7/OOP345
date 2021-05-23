@@ -1,0 +1,4 @@
+﻿  part-4.cpp
+C:\Users\davin\Desktop\finalTest\part-4.cpp(39,7): error C2373: 'select': redefinition; different type modifiers
+C:\Users\davin\Desktop\finalTest\part-4.cpp(21): message : see declaration of 'select'
+C:\Users\davin\Desktop\finalTest\part-4.cpp(39,22): warning C4305: 'initializing': truncation from 'bool (__cdecl *)(const int &)' to 'bool'
